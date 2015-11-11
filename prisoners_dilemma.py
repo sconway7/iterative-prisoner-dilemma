@@ -320,7 +320,7 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
     elif player == 8:
         if getting_team_name:
             #if there was a previous round just like 
-            return 'loyal vengeful with permanent second impression'
+            return 'The Missing Liams'
         else:
             # use history, opponent_history, score, opponent_score
             # to compute your strategy      
