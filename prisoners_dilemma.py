@@ -111,9 +111,26 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
     # This example player always colludes
     if player == 0:
         if getting_team_name:
-            return 'loyal'
+            return 'Sham-o-Clean t-9000'
         else:
-            return 'c'
+           if(len(history) != 0):
+                if(history[len(history)-1] != opponent_history[len(opponent_history)-1]):
+                    if(opponent_history[len(opponent_history)-1]) == 'b':
+                        return('b')
+                if(history[len(history)-1] == opponent_history[len(opponent_history)-1]):
+                    if history[len(history)-1] == 'b':
+                        if random.randint(1,2) == 1:
+                            return('c')
+                        else:
+                            return('b')
+                    else:
+                        return('b')
+           else:                    
+                if random.randint(1,2) == 1:
+                    return('c')
+                else:
+                    return('b')
+
 
     
         
